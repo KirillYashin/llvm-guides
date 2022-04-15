@@ -35,11 +35,27 @@ cd build
 ```
 
 
-### **Build**
+### **Build preparation**
 
 ```bash
-cmake -DLLVM_ENABLE_PROJECTS=clang -G "Unix Makefiles" ../llvm
+cmake -DLLVM_ENABLE_PROJECTS="clang;libcxx;libcxxabi;opt" -G "Unix Makefiles" ../llvm
 ```
+
+### **Extra swap file to prevent build failure due to lack of RAM*
+
+```bash
+sudo fallocate -l 16G /swapfile
+```
+
+```bash
+sudo chmod 600 /swapfile
+```
+
+```bash
+sudo mkswap /swapfile && sudo swapon /swapfile
+```
+
+### **Build**
 
 ```bash
 make -j <Number of CPU threads - 2>
