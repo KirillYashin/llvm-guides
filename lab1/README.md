@@ -41,6 +41,10 @@ cd build
 cmake -DLLVM_ENABLE_PROJECTS=clang -G "Unix Makefiles" ../llvm
 ```
 
+```bash
+make -j <Number of CPU threads - 2>
+```
+
 
 ### **Add llvm to PATH**
 
