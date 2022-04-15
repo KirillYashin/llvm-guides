@@ -44,6 +44,14 @@ cmake -DLLVM_ENABLE_PROJECTS="clang;libcxx;libcxxabi" -G "Unix Makefiles" ../llv
 ### **Extra swap file to prevent build failure due to lack of RAM*
 
 ```bash
+sudo swapoff -a
+```
+
+```bash
+sudo rm -f /swapfile
+```
+
+```bash
 sudo fallocate -l 16G /swapfile
 ```
 
