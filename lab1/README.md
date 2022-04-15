@@ -1,37 +1,37 @@
 ### **Get required packages**
 
-'sudo apt install git'
+`sudo apt install git`
 
-'sudo apt install clang'
+`sudo apt install clang`
 
-'sudo apt install cmake'
+`sudo apt install cmake`
 
 
 ### **Clone llvm repo**
 
-'git clone https://github.com/llvm/llvm-project.git'
+`git clone https://github.com/llvm/llvm-project.git`
 
 
 ### **Build preparation**
 
-'cd llvm-project'
+`cd llvm-project`
 
-'mkdir build'
+`mkdir build`
 
-'cd build'
+`cd build`
 
 
 ### **Build**
-'cmake -DLLVM_ENABLE_PROJECTS=clang -G "Unix Makefiles" ../llvm'
+`cmake -DLLVM_ENABLE_PROJECTS=clang -G "Unix Makefiles" ../llvm`
 
-'make'
+`make`
 
 
 ### **Add llvm to PATH**
 
-'export PATH=$PATH:<your path to llvm-project>/llvm/build/bin'
+`export PATH=$PATH:<your path to llvm-project>/llvm/build/bin`
 
   
 ### **Usage example**
   
-'clang++ filename.cpp -S -emit-llvm -o -O0'
+`clang++ filename.cpp -S -emit-llvm -o -O0`
