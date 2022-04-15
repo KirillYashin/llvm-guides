@@ -41,10 +41,6 @@ cd build
 cmake -DLLVM_ENABLE_PROJECTS=clang -G "Unix Makefiles" ../llvm
 ```
 
-```bash
-make
-```
-
 
 ### **Add llvm to PATH**
 
@@ -56,5 +52,9 @@ export PATH=$PATH:<your path to llvm-project>/llvm/build/bin
 ### **Usage example**
   
 ```bash
-clang++ filename.cpp -S -emit-llvm -o -O0
+clang++ filename.cpp -S -emit-llvm -o -O0 > filename.ll
+```
+
+```bash
+clang++ filename.cpp -S -emit-llvm -o -O1 > filename.ll
 ```
