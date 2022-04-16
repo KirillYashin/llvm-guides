@@ -38,7 +38,7 @@ cd build
 ### **Build preparation**
 
 ```bash
-cmake -DLLVM_ENABLE_PROJECTS="clang;libcxx;libcxxabi" -G "Unix Makefiles" ../llvm
+cmake -DLLVM_ENABLE_PROJECTS=clang-G "Unix Makefiles" ../llvm
 ```
 
 ### **Extra swap file to prevent build failure due to lack of RAM**
@@ -70,8 +70,9 @@ sudo swapon /swapfile
 ### **Build**
 
 ```bash
-make -j <Number of CPU threads - 2>
+make -j <Number of CPU threads div 2>
 ```
+## If you have errors try to reduce threads (maybe it's better to use one thread, I have 12 and I used 4)
 
 
 ### **Add llvm to PATH**
