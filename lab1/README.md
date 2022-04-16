@@ -60,7 +60,11 @@ sudo chmod 600 /swapfile
 ```
 
 ```bash
-sudo mkswap /swapfile && sudo swapon /swapfile
+sudo mkswap /swapfile
+```
+
+```bash
+sudo swapon /swapfile
 ```
 
 ### **Build**
