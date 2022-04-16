@@ -72,7 +72,7 @@ sudo swapon /swapfile
 ```bash
 make -j <Number of CPU threads div 2>
 ```
-## If you have errors try to reduce threads (maybe it's better to use one thread, I have 12 and I used 4)
+#### If you have errors try to reduce threads (maybe it's better to use one thread, I have 12 and I used 4)
 
 
 ### **Add llvm to PATH**
