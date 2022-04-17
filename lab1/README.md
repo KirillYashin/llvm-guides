@@ -80,7 +80,14 @@ make -j <Number of CPU threads div 2>
 ```
 #### If you have errors try to reduce threads (maybe it's better to use one thread, I have 12 and I used 4)
 #### If you have build failure on 80+ per cents, try to do make again with less threads (make can continue build, you don't need to do all the steps again)
-
+#### Useful advice: install htop
+``` bash
+sudo apt install htop
+```
+```bash
+htop
+```
+#### You can check your PC resources with it and it can help you to configure swap file size
 
 ### **Add llvm to PATH**
 
