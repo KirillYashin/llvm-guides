@@ -1,3 +1,7 @@
+### Ubuntu installing
+#### Instruction - [link](https://losst.ru/ustanovka-linux-ryadom-s-windows-10)
+#### I recommend to allocate minumum 150 gb to Ubuntu
+
 ### **Get required packages**
 
 ```bash
@@ -73,6 +77,7 @@ sudo swapon /swapfile
 make -j <Number of CPU threads div 2>
 ```
 #### If you have errors try to reduce threads (maybe it's better to use one thread, I have 12 and I used 4)
+#### If you have build failure on 80+ per cents, try to do make again with less threads (make can continue build, you don't need to do all the steps again)
 
 
 ### **Add llvm to PATH**
