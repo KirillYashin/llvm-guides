@@ -92,7 +92,7 @@ htop
 ### **Add llvm to PATH**
 
 ```bash
-export PATH=$PATH:<your path to llvm-project>/llvm/build/bin
+export PATH=$PATH:<your path to llvm-project>/build/bin
 ```
 
   
