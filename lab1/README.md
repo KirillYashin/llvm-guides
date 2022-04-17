@@ -160,3 +160,6 @@ sudo cset shield --exec -- perf stat -r 10 <path to compiled files (for example,
 #### You need to change LICM.cpp file
 #### 1st change - runOnLoop function should always return false
 #### 2nd change - LoopInvariantCodeMotion should always return false
+#### Then rebuild llvm+clang, compile files again and do benchmarking
+
+### FAST AND EASY
