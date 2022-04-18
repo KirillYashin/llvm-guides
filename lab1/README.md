@@ -42,7 +42,7 @@ cd build
 ### **Build preparation**
 
 ```bash
-cmake -DLLVM_ENABLE_PROJECTS=clang-G "Unix Makefiles" ../llvm
+cmake -DLLVM_ENABLE_PROJECTS=clang -G "Unix Makefiles" ../llvm
 ```
 
 ### **Extra swap file to prevent build failure due to lack of RAM**
