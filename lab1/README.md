@@ -99,11 +99,11 @@ export PATH=$PATH:<your path to llvm-project>/build/bin
 ### **Usage example**
   
 ```bash
-clang++ filename.cpp -S -emit-llvm -o -O0 > filename.ll
+clang++ filename.cpp -S -emit-llvm -o - -O0 > filename.ll
 ```
 
 ```bash
-clang++ filename.cpp -S -emit-llvm -o -O1 > filename.ll
+clang++ filename.cpp -S -emit-llvm -o - -O1 > filename.ll
 ```
 
 ```bash
