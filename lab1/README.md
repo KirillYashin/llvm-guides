@@ -15,7 +15,7 @@ sudo apt install clang
 ```bash
 sudo apt install cmake
 ```
-
+### YOU CAN FIND SCRIPT FOR INSTALLING HERE, USE IT (FASTER AND EASIER)
 
 ### **Clone llvm repo**
 
