@@ -9,13 +9,10 @@ sudo apt install git
 ```
 
 ```bash
-sudo apt install clang
-```
-
-```bash
 sudo apt install cmake
 ```
 ### YOU CAN FIND SCRIPT FOR INSTALLING HERE, USE IT (FASTER AND EASIER)
+### NOTICE: USE CLANG IN BUILD DIR (IT BUILDS WITH LLVM)
 
 ### **Clone llvm repo**
 
