@@ -1,0 +1,46 @@
+wget -N https://releases.llvm.org/6.0.0/llvm-6.0.0.src.tar.xz
+wget -N https://releases.llvm.org/6.0.0/cfe-6.0.0.src.tar.xz
+
+rm -rf ./llvm-6.0.0.src/
+
+tar -xf llvm-6.0.0.src.tar.xz
+tar -xf cfe-6.0.0.src.tar.xz -C ./llvm-6.0.0.src/tools
+mv ./llvm-6.0.0.src/tools/cfe-6.0.0.src ./llvm-6.0.0.src/tools/clang
+
+cd ./llvm-6.0.0.src
+mkdir build
+cd ./build
+
+cmake \
+    -DCMAKE_BUILD_TYPE="MinSizeRel" \
+    -DLLVM_TARGETS_TO_BUILD="host" \
+    -DCLANG_ENABLE_ARCMT="NO" \
+    -DCLANG_INCLUDE_DOCS="NO" \
+    -DCLANG_INCLUDE_TESTS="NO" \
+    -DCLANG_INSTALL_SCANBUILD="NO" \
+    -DCLANG_INSTALL_SCANVIEW="NO" \
+    -DCLANG_PLUGIN_SUPPORT="NO" \
+    -DCLANG_TOOL_HANDLE_CXX_BUILD="NO" \
+    -DCOMPILER_RT_CAN_EXECUTE_TESTS="NO" \
+    -DCOMPILER_RT_INCLUDE_TESTS="NO" \
+    -DLLD_BUILD_TOOLS="NO" \
+    -DLLVM_ADD_NATIVE_VISUALIZERS_TO_SOLUTION="NO" \
+    -DLLVM_BUILD_RUNTIME="NO" \
+    -DLLVM_BUILD_RUNTIMES="NO" \
+    -DLLVM_BUILD_TOOLS="NO" \
+    -DLLVM_BUILD_UTILS="NO" \
+    -DLLVM_ENABLE_LIBEDIT="NO" \
+    -DLLVM_ENABLE_LOCAL_SUBMODULE_VISIBILITY="NO" \
+    -DLLVM_ENABLE_PIC="NO" \
+    -DLLVM_ENABLE_OCAMLDOC="NO" \
+    -DLLVM_ENABLE_PEDANTIC="NO" \
+    -DLLVM_INCLUDE_DOCS="NO" \
+    -DLLVM_INCLUDE_EXAMPLES="NO" \
+    -DLLVM_INCLUDE_GO_TESTS="NO" \
+    -DLLVM_INCLUDE_RUNTIMES="NO" \
+    -DLLVM_INCLUDE_TESTS="NO" \
+    -DLLVM_INCLUDE_UTILS="NO" \
+    -DLLVM_POLLY_BUILD="NO" \
+    -DLLVM_POLLY_LINK_INTO_TOOLS="NO" \
+    ..
+make -j4
