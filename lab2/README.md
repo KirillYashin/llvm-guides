@@ -10,11 +10,7 @@ sudo apt install clang-11
 ```
 
 ```bash
-sudo apt install llvm-extract
-```
-
-```bash
-sudo apt install llvm-dis
+sudo apt install llvm
 ```
 
 #### If something not working you can change clang-11 to clang++ or clang in scripts
